@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="SandboxScenario" basedir=".">
+
+	<!-- Makro to switch a context -->
+	<macrodef name="switchContext">
+		<attribute name="to" />
+		<sequential>
+			<propertyfile file="config/currentContext.properties">
+				<entry key="context.file" value="@{to}" />
+			</propertyfile>
+			<echoproperties srcfile="@{to}" />
+		</sequential>
+	</macrodef>
+
+
+	<!-- Targets to switch contexts -->
+	<!-- Global BS ubah context BS sesuai dengan skenario yang dipakai -->
+	
+	<target name="Scenario0_BS">
+		<switchContext to="config/context0.ScenarioBS.properties" />
+	</target>
+	
+	<!-- Scenario 1 -->
+
+	<target name="Scenario1_CH">
+		<switchContext to="config/context1_2.Scenario1CH.properties" />
+	</target>
+
+	<target name="Scenario1_SN1">
+		<switchContext to="config/context1_3.Scenario1SN1.properties" />
+	</target>
+	
+	<target name="Scenario1_SN2">
+			<switchContext to="config/context1_4.Scenario1SN2.properties" />
+	</target>
+	
+	<target name="Scenario1_SN3">
+				<switchContext to="config/context1_5.Scenario1SN3.properties" />
+	</target>
+	
+	<target name="Scenario1_SN4">
+			<switchContext to="config/context1_6.Scenario1SN4.properties" />
+	</target>
+	
+	<!-- Scenario 2 -->
+	
+	<target name="Scenario2_CH1">
+		<switchContext to="config/context2_2.Scenario2CH1.properties" />
+	</target>
+	
+	<target name="Scenario2_CH2">
+		<switchContext to="config/context2_3.Scenario2CH2.properties" />
+	</target>
+	
+	<target name="Scenario2_SN1">
+		<switchContext to="config/context2_4.Scenario2SN1.properties" />
+	</target>
+	
+	<target name="Scenario2_SN2">
+		<switchContext to="config/context2_5.Scenario2SN2.properties" />
+	</target>
+	
+	<target name="Scenario2_SN3">
+		<switchContext to="config/context2_6.Scenario2SN3.properties" />
+	</target>
+	
+	<!-- Scenario 3 -->
+	
+	<target name="Scenario3_CH1">
+		<switchContext to="config/context3_2.Scenario3CH1.properties" />
+	</target>
+	
+	<target name="Scenario3_SN1">
+		<switchContext to="config/context3_3.Scenario3SN1.properties" />
+	</target>
+	
+	<target name="Scenario3_SN2">
+		<switchContext to="config/context3_4.Scenario3SN2.properties" />
+	</target>
+	
+	<target name="Scenario3_SN3">
+		<switchContext to="config/context3_5.Scenario3SN3.properties" />
+	</target>
+	
+	<target name="Scenario3_SN4">
+		<switchContext to="config/context3_6.Scenario3SN4.properties" />
+	</target>
+
+</project>
